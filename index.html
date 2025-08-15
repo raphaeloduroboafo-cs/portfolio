@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raphael Oduro Boafo | Mathematics & Applied Research</title>
+  <meta name="description" content="Portfolio of Raphael Oduro Boafo — Mathematics, Machine Learning, Optimization, and Stochastic Modeling. Projects aligned with UND faculty research interests." />
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="Raphael Oduro Boafo | Mathematics & Applied Research" />
+  <meta property="og:description" content="Mathematical modeling, ML, stochastic processes, nonsmooth optimization, and geometric analysis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>∑</text></svg>">
+  <style>
+    :root{
+      --bg: #ffffff; --fg: #0f172a; --muted:#334155; --brand:#0ea5e9; --brand-2:#22c55e; --card:#f8fafc; --border:#e2e8f0; --shadow: 0 10px 30px rgba(2,8,23,.08);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1220; --fg:#e5eefb; --muted:#9fb0c8; --brand:#38bdf8; --brand-2:#22c55e; --card:#0f172a; --border:#1e293b; --shadow: 0 10px 30px rgba(0,0,0,.5); }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji';
+         background:var(--bg); color:var(--fg); line-height:1.6}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding: 24px}
+    header{position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px); background: color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--border); z-index:10}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .nav a.logo{font-weight:800; letter-spacing:.3px; color:var(--fg)}
+    .nav .links{display:flex; gap:18px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); padding:10px 14px; border-radius:14px; background:var(--card); color:var(--fg); box-shadow:var(--shadow); font-weight:600}
+    .btn:hover{transform:translateY(-1px); text-decoration:none}
+    .btn.primary{background:linear-gradient(135deg,var(--brand), var(--brand-2)); color:white; border:0}
+    .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; padding-top:28px; align-items:center}
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
+    .badge{display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; background: color-mix(in oklab, var(--brand) 18%, var(--card)); border:1px solid var(--border)}
+    h1{font-size: clamp(32px, 4vw, 44px); line-height:1.2; margin:6px 0 10px}
+    h2{font-size: clamp(24px, 3vw, 30px); margin: 26px 0 8px}
+    p.lead{font-size: clamp(16px, 2vw, 18px); color:var(--muted)}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px; box-shadow:var(--shadow)}
+    .grid{display:grid; gap:18px}
+    .grid.projects{grid-template-columns: repeat(2, minmax(0,1fr))}
+    @media (max-width: 800px){ .grid.projects{grid-template-columns: 1fr} }
+    .tag{display:inline-block; padding:6px 10px; border:1px solid var(--border); border-radius:999px; font-size:12px; margin:2px 6px 0 0; background: color-mix(in oklab, var(--bg) 92%, var(--brand))}
+    .kpis{display:flex; gap:22px; flex-wrap:wrap; margin:10px 0}
+    .kpi{min-width:140px}
+    .kpi b{font-size:22px}
+    section{padding: 28px 0}
+    .list{margin:0; padding-left:18px}
+    .footer{border-top:1px solid var(--border); margin-top:32px; padding:24px 0; font-size:14px; color:var(--muted)}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+    /* Timeline */
+    .timeline{position:relative;}
+    .timeline::before{content:""; position:absolute; left:8px; top:0; bottom:0; width:2px; background:var(--border)}
+    .event{position:relative; padding-left:28px; margin: 16px 0}
+    .dot{position:absolute; left:3px; top:6px; width:12px; height:12px; background:var(--brand); border-radius:999px}
+    /* Contact */
+    form{display:grid; gap:12px}
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:var(--bg); color:var(--fg)}
+    label{font-weight:600}
+    .note{font-size:13px; color:var(--muted)}
+    /* Dark-mode toggle */
+    .toggle{cursor:pointer; border:1px solid var(--border); border-radius:999px; padding:8px 10px}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raphael Oduro Boafo",
+    "jobTitle": "Quantitative Analyst | Mathematics Researcher",
+    "email": "raphaeloduro200@yahoo.com",
+    "telephone": "+233247125065",
+    "url": "",
+    "sameAs": [
+      "",  
+      ""   
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="Home">R. Oduro Boafo</a>
+      <nav class="links" aria-label="Primary">
+        <a href="#research">Research</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <button id="modeToggle" class="toggle" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">Mathematics • Machine Learning • Optimization</span>
+        <h1>Bridging <em>theory</em> and <em>impact</em> in Mathematics & Applied Research</h1>
+        <p class="lead">I am <strong>Raphael Oduro Boafo</strong>, a First-Class BSc Mathematics graduate (KNUST). I work at the intersection of <strong>mathematical modeling</strong>, <strong>stochastic processes</strong>, <strong>nonsmooth optimization</strong>, and <strong>machine learning</strong> — with applications to urban mobility, wireless systems, geometry, and data-driven decision making.</p>
+        <div class="kpis">
+          <div class="kpi"><b>4</b><div>Research lines aligned with UND faculty</div></div>
+          <div class="kpi"><b>20%+</b><div>Portfolio performance uplift via ML models</div></div>
+          <div class="kpi"><b>HPC</b><div>Numerical methods & simulations in Python/MATLAB</div></div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <a class="btn primary" href="#research">Explore Research</a>
+          <a class="btn" href="#resume">View Resume</a>
+          <a class="btn" href="CV_Raphael_Oduro_Boafo.pdf" download>Download CV</a>
+        </div>
+        <p class="note" style="margin-top:10px">Web Profiles: <a href="https://sites.google.com/" target="_blank" rel="noopener">Google Sites Profile</a> • <a href="#" target="_blank" rel="noopener">Portfolio</a></p>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">About</h2>
+        <p>I focus on rigorous mathematics with practical outcomes. Recent work includes stabilization-aware traffic modeling, symbolic differential geometry for complex surfaces, probabilistic random-walk analysis on city graphs, and nonsmooth optimization for energy-efficient wireless networks.</p>
+        <ul class="list">
+          <li><strong>Interests:</strong> Control & dynamical systems, geometric analysis, stochastic processes, variational analysis.</li>
+          <li><strong>Tools:</strong> Python, MATLAB, Mathematica, R, SPSS, LaTeX.</li>
+          <li><strong>Location:</strong> Kumasi, Ghana · <a href="mailto:raphaeloduro200@yahoo.com">raphaeloduro200@yahoo.com</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Selected Research & Projects</h2>
+      <div class="grid projects">
+        <!-- Project 1 -->
+        <article class="card">
+          <h3 style="margin-top:0">Urban Mobility Stabilization Model</h3>
+          <p class="lead">Control theory + stabilization phenomena with ML for congestion prediction and mitigation in urban networks.</p>
+          <ul class="list">
+            <li>Designed dynamical systems with feedback control to dampen shockwaves in traffic flow.</li>
+            <li>Integrated gradient-boosted models to forecast instability onset in simulated Kumasi/Fargo layouts.</li>
+            <li>Outcome: improved early-warning horizon and reduced simulated peak congestion by ~22%.</li>
+          </ul>
+          <div>
+            <span class="tag">Control</span><span class="tag">ML</span><span class="tag">Stabilization</span><span class="tag">Traffic</span>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="card">
+          <h3 style="margin-top:0">Geometric Surface Modeling via Symbolic Computation</h3>
+          <p class="lead">Differential geometry with CAS to derive curvature invariants and simulate evolving surfaces.</p>
+          <ul class="list">
+            <li>Automated derivations of mean/gaussian curvature for parametrized surfaces.</li>
+            <li>Visualizations of shell structures and biological membranes with deformation scenarios.</li>
+            <li>Toolkit prototyped in Mathematica; exportable to LaTeX for reproducible workflows.</li>
+          </ul>
+          <div>
+            <span class="tag">Differential Geometry</span><span class="tag">CAS</span><span class="tag">Geometric Analysis</span>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="card">
+          <h3 style="margin-top:0">Random Walks for Urban Network Optimization</h3>
+          <p class="lead">Stochastic simulations on irregular graphs to optimize facility placement and coverage.</p>
+          <ul class="list">
+            <li>Analyzed hitting/mixing times under heterogeneous edge weights and obstacles.</li>
+            <li>Optimized hotspot placement using steady-state visitation distributions.</li>
+            <li>Applications: Wi‑Fi planning, public services siting, telecom coverage.</li>
+          </ul>
+          <div>
+            <span class="tag">Probability</span><span class="tag">Random Environments</span><span class="tag">Networks</span>
+          </div>
+        </article>
+        <!-- Project 4 -->
+        <article class="card">
+          <h3 style="margin-top:0">Nonsmooth Optimization for Energy‑Efficient Wireless</h3>
+          <p class="lead">Variational analysis + first/second‑order methods for resource‑constrained IoT networks.</p>
+          <ul class="list">
+            <li>Formulated composite, constrained, and bilevel problems for power allocation.</li>
+            <li>Implemented generalized proximal & trust‑region updates for nonconvex objectives.</li>
+            <li>Outcome: simulated energy reduction up to ~18% without latency penalties.</li>
+          </ul>
+          <div>
+            <span class="tag">Nonsmooth Optimization</span><span class="tag">Variational Analysis</span><span class="tag">Wireless</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume & Certifications</h2>
+      <div class="grid" style="grid-template-columns: 1.2fr .8fr">
+        <div class="card timeline">
+          <div class="event">
+            <span class="dot" aria-hidden="true"></span>
+            <h4 style="margin:0">Quantitative Analyst · Apex Financial Solutions</h4>
+            <small>Jun 2022 – Present · Kumasi, Ghana</small>
+            <p>Predictive modeling for risk and portfolio optimization (Monte Carlo, control‑informed ML).</p>
+          </div>
+          <div class="event">
+            <span class="dot" aria-hidden="true"></span>
+            <h4 style="margin:0">Mathematical Consultant · TechSolve Innovations</h4>
+            <small>Feb 2021 – May 2022</small>
+            <p>Numerical methods, optimization pipelines, high‑performance computation in Python/MATLAB.</p>
+          </div>
+          <div class="event">
+            <span class="dot" aria-hidden="true"></span>
+            <h4 style="margin:0">Research Intern · Ghana Statistical Service</h4>
+            <small>Jun 2020 – Dec 2020 · Accra, Ghana</small>
+            <p>Statistical modeling of demographic indicators (R/SPSS; time series and hypothesis testing).</p>
+          </div>
+          <div class="event">
+            <span class="dot" aria-hidden="true"></span>
+            <h4 style="margin:0">Teaching Assistant · KNUST Mathematics</h4>
+            <small>Feb 2019 – Mar 2020</small>
+            <p>Tutorials in Probability, Statistics, Differential Equations; developed applied exercises.</p>
+          </div>
+        </div>
+        <aside class="card">
+          <h3 style="margin-top:0">Education</h3>
+          <p><strong>KNUST</strong> — BSc Mathematics, First Class (CWA 89.07/100), Nov 2022</p>
+          <p><strong>Kumasi Technical University</strong> — Diploma in Computerized Accounting, Aug 2018</p>
+          <h3>Certifications</h3>
+          <ul class="list">
+            <li>Certified Data Analyst (IASC)</li>
+            <li>FMVA (CFI)</li>
+            <li>Microsoft Certified: Data Science Associate</li>
+          </ul>
+          <h3>Tech Stack</h3>
+          <p>Python, MATLAB, Mathematica, R, SPSS, C++, Java, SQL, LaTeX; HTML/CSS/JS; CAS workflows.</p>
+          <div style="margin-top:12px">
+            <a class="btn" href="CV_Raphael_Oduro_Boafo.pdf" download>Download Full CV</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <form id="contactForm" aria-describedby="contactNote">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we collaborate?" required></textarea>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+            <button class="btn primary" type="submit">Send Message</button>
+            <span id="contactNote" class="note">No backend needed — this opens your email client with a pre‑filled message.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container" style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap">
+        <div>
+          © <span id="year"></span> Raphael Oduro Boafo · Kumasi, Ghana
+        </div>
+        <div>
+          <a href="mailto:raphaeloduro200@yahoo.com">raphaeloduro200@yahoo.com</a> · <a href="#">Google Sites</a> · <a href="#">Portfolio</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark/light toggle (respects prefers-color-scheme by default)
+    const modeToggle = document.getElementById('modeToggle');
+    const updateMode = () => {
+      const m = localStorage.getItem('theme');
+      if(!m){ document.documentElement.removeAttribute('data-theme'); return; }
+      document.documentElement.setAttribute('data-theme', m);
+    };
+    updateMode();
+    modeToggle.addEventListener('click', () => {
+      const m = localStorage.getItem('theme');
+      const next = m === 'light' ? 'dark' : (m === 'dark' ? '' : 'dark');
+      if(next){ localStorage.setItem('theme', next); } else { localStorage.removeItem('theme'); }
+      modeToggle.setAttribute('aria-pressed', next === 'dark');
+      updateMode();
+    });
+
+    // Contact form: mailto fallback
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = `Website inquiry from ${name}`;
+      const body = `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+      window.location.href = `mailto:raphaeloduro200@yahoo.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
