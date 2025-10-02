@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Oduro Boafo - Applied Mathematician & Data Scientist</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for a clean, modern look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles: Using Slate for a professional feel, and Cyan as the accent */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Slate-100 for a gentle off-white background */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        
+        /* DARK MODE BASE STYLES */
+        html.dark body {
+            background-color: #0f172a; /* Slate-900 */
+            color: #e2e8f0; /* Slate-200 */
+        }
+        
+        /* Custom classes */
+        .header-bg {
+            /* Subtle gradient for depth */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
+        }
+        /* DARK MODE HEADER OVERRIDE (Same dark gradient is fine) */
+        html.dark .header-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); 
+        }
+
+        .accent-color {
+            color: #06b6d4; /* Cyan-500 */
+        }
+        /* DARK MODE ACCENT OVERRIDE */
+        html.dark .accent-color {
+            color: #22d3ee; /* Cyan-400 for contrast */
+        }
+        
+        .section-title {
+            position: relative;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            color: #1e293b; /* Slate-800 */
+        }
+        /* DARK MODE TITLE OVERRIDE */
+        html.dark .section-title {
+            color: #f1f5f9; /* Slate-100 */
+        }
+
+        /* Custom line under section title using the accent color */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #06b6d4; /* Cyan-500 */
+            border-radius: 9999px;
+        }
+        /* DARK MODE LINE OVERRIDE (Use lighter accent) */
+        html.dark .section-title::after {
+            background-color: #22d3ee;
+        }
+        
+        .item-block {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #94a3b8; /* Subtle left border for structure */
+            background-color: #ffffff;
+            transition: all 0.3s ease-in-out;
+        }
+        /* DARK MODE ITEM BLOCK OVERRIDE */
+        html.dark .item-block {
+            background-color: #1e293b; /* Slate-800 */
+            border-left-color: #64748b; /* Slate-500 */
+        }
+
+        .item-block:hover {
+            border-left-color: #06b6d4; /* Accent color on hover */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        /* DARK MODE ITEM BLOCK HOVER OVERRIDE */
+        html.dark .item-block:hover {
+            border-left-color: #22d3ee; /* Cyan-400 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-tag {
+            background-color: #e2e8f0; /* Light Gray */
+            color: #1e293b;
+            transition: all 0.2s;
+        }
+        /* DARK MODE SKILL TAG OVERRIDE */
+        html.dark .skill-tag {
+            background-color: #334155; /* Slate-700 */
+            color: #f1f5f9;
+        }
+        html.dark .skill-tag:hover {
+            background-color: #22d3ee; /* Accent Color (Cyan-400) */
+            color: #0f172a; /* Darker text for contrast */
+        }
+
+        /* Ensure text and links inherit color in dark mode */
+        html.dark a, html.dark .text-gray-700, html.dark .text-gray-900 {
+            color: inherit !important;
+        }
+        
+        /* Print styles for a clean resume look */
+        @media print {
+            body { background-color: white !important; }
+            .no-print { display: none !important; }
+            .main-content-card { box-shadow: none !important; margin: 0 !important; }
+            .section-title::after { background-color: #333 !important; }
+            .item-block { border-left-color: #ccc !important; padding: 0.5rem 0 0.5rem 1rem !important; }
+            .header-bg { background: #333 !important; color: white !important; print-color-adjust: exact; }
+            .accent-color { color: #333 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="main-content-card mx-auto max-w-6xl my-8 overflow-hidden rounded-xl shadow-2xl">
+
+        <!-- Header Section: High Contrast and Professional -->
+        <header class="header-bg p-8 text-white md:p-12 lg:flex lg:items-center lg:justify-between">
+            <div class="text-center lg:text-left">
+                <!-- Profile Picture -->
+                <div class="relative mx-auto h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-lg md:h-32 md:w-32 lg:mx-0">
+                    <img src="Raphael Oduro potrait.jpg" alt="Raphael Oduro Boafo" onerror="this.onerror=null;this.src='https://placehold.co/256x256/06b6d4/FFFFFF?text=R.O.B';" class="h-full w-full object-cover">
+                </div>
+                
+                <h1 class="mt-4 text-4xl font-extrabold uppercase tracking-tight md:text-5xl">RAPHAEL ODURO BOAFO</h1>
+                <p class="mt-1 text-xl font-light opacity-90 md:text-2xl">Applied Mathematician & Data Scientist</p>
+            </div>
+            
+            <div class="mt-8 lg:mt-0 lg:w-1/3 lg:text-right">
+                
+                <!-- Contact Information -->
+                <div class="flex flex-col items-center space-y-2 text-sm font-medium lg:items-end lg:space-y-3">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="map-pin" class="h-4 w-4 text-cyan-500"></i>
+                        <span class="opacity-90">Plot 2 Block 16, New Amakom</span>
+                    </div>
+                    <a href="mailto:raphaeloduro200@yahoo.com" class="group flex items-center space-x-2 transition duration-300 hover:text-cyan-400">
+                        <i data-lucide="mail" class="h-4 w-4 text-cyan-500 group-hover:text-cyan-400"></i>
+                        <span class="opacity-90">raphaeloduro200@yahoo.com</span>
+                    </a>
+                    <a href="tel:+233247125065" class="group flex items-center space-x-2 transition duration-300 hover:text-cyan-400">
+                        <i data-lucide="phone" class="h-4 w-4 text-cyan-500 group-hover:text-cyan-400"></i>
+                        <span class="opacity-90">+233 247 125 065</span>
+                    </a>
+                </div>
+
+                <!-- Social Media & Interactive Element -->
+                <div class="mt-6 flex justify-center space-x-4 lg:justify-end no-print">
+                    <a href="https://linkedin.com/in/raphaeloduroboafo" target="_blank" aria-label="LinkedIn Profile" class="group transition-transform duration-300 hover:-translate-y-1">
+                        <i data-lucide="linkedin" class="h-6 w-6 text-gray-300 hover:text-cyan-500"></i>
+                    </a>
+                    <!-- Updated Portfolio Link -->
+                    <a href="https://raphaeloduroboafo-cs.github.io/portfolio/" target="_blank" aria-label="Portfolio/GitHub" class="group transition-transform duration-300 hover:-translate-y-1">
+                        <i data-lucide="folder-git" class="h-6 w-6 text-gray-300 hover:text-cyan-500"></i>
+                    </a>
+                    
+                    <!-- Dark Mode Toggle Button (New) -->
+                    <button id="theme-toggle" aria-label="Toggle Dark/Light Mode" class="h-10 w-10 flex items-center justify-center rounded-full bg-slate-700 transition duration-300 hover:bg-slate-600 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50">
+                        <!-- Icon will be set by JS -->
+                        <i data-lucide="sun" id="theme-icon" class="h-5 w-5 text-gray-300"></i>
+                    </button>
+
+                    <!-- Download CV Button -->
+                    <button onclick="alert('Simulating CV download...')" aria-label="Download Full Curriculum Vitae" class="rounded-lg bg-cyan-500 px-4 py-2 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition duration-300 hover:bg-cyan-600 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50">
+                        <i data-lucide="download" class="mr-2 inline-block h-4 w-4"></i>
+                        Download CV
+                    </button>
+                    <!-- Note: Using alert() here as a controlled simulation for the file generation environment. In a real app, this would trigger a file download. -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="p-8 md:p-12 lg:grid lg:grid-cols-3 lg:gap-12">
+            
+            <!-- Left Column for Summary & Skills (LG devices) -->
+            <div class="lg:col-span-1">
+                
+                <!-- Summary Section -->
+                <section class="mb-8">
+                    <h2 class="section-title">SUMMARY & RESEARCH INTERESTS</h2>
+                    <p class="text-base text-gray-700 font-semibold mb-3">Core research interests include:</p>
+                    <ul class="list-disc space-y-1 ml-5 text-sm text-gray-700">
+                        <li>Mathematical Modelling, Stochastic Processes, Control Theory</li>
+                        <li>Nonsmooth Optimization, Geometric Analysis, Numerical Methods</li>
+                        <li>Applied Statistics, High-Performance Computation</li>
+                    </ul>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="mb-8">
+                    <h2 class="section-title">TECHNICAL SKILLS</h2>
+                    
+                    <div class="mb-4">
+                        <h3 class="mb-2 font-semibold text-gray-900 flex items-center"><i data-lucide="bar-chart-3" class="mr-2 h-4 w-4 accent-color"></i> Programming and Data Science</h3>
+                        <ul class="flex flex-wrap gap-2 text-sm">
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Python</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">R</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">MATLAB</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Mathematica</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">SQL</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">SPSS</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">C++</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="mb-2 font-semibold text-gray-900 flex items-center"><i data-lucide="git-branch" class="mr-2 h-4 w-4 accent-color"></i> Mathematical Tools</h3>
+                        <ul class="flex flex-wrap gap-2 text-sm">
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Real Analysis</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Functional Analysis</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Stochastic Processes</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Optimization</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Numerical Analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="mb-2 font-semibold text-gray-900 flex items-center"><i data-lucide="book-open" class="mr-2 h-4 w-4 accent-color"></i> Research Tools</h3>
+                        <ul class="flex flex-wrap gap-2 text-sm">
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">LaTeX</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">Computer Algebra Systems</li>
+                            <li class="skill-tag rounded-full px-3 py-1.5 font-medium shadow-sm">HPC</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="mb-8">
+                    <h2 class="section-title">EDUCATION</h2>
+                    <div class="space-y-4">
+                        <div class="item-block">
+                            <div class="flex flex-col justify-between md:flex-row md:items-start">
+                                <h3 class="text-xl font-bold text-gray-900">Bachelor of Science Mathematics (First Class)</h3>
+                                <p class="text-sm font-medium text-gray-500 shrink-0">Sept. 2018 – Nov., 2022</p>
+                            </div>
+                            <p class="text-base font-semibold italic text-cyan-600">Kwame Nkrumah University of Science & Technology (KNUST), Kumasi, Ghana</p>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Cumulative Weighted Average (CWA): 87.77/100.</li>
+                                <li>Relevant Coursework: Real Analysis, Functional Analysis, Probability & Statistics, Numerical Analysis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+            <!-- Right Column for Experience & Research -->
+            <div class="lg:col-span-2">
+
+                <!-- Professional Experience Section -->
+                <section class="mb-8">
+                    <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+                    <div class="space-y-4">
+                        <div class="item-block">
+                            <div class="flex flex-col justify-between md:flex-row md:items-start">
+                                <h3 class="text-xl font-bold text-gray-900">Financial Data Analyst (Monitoring and Evaluation)</h3>
+                                <p class="text-sm font-medium text-gray-500 shrink-0">June 2022 – Present</p>
+                            </div>
+                            <p class="text-base font-semibold italic text-cyan-600">Barry Callebaut Group, Kumasi, Ghana</p>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Automated SQL-based data validation pipelines, improving database reliability by **95%** and enhancing accuracy for econometric forecasting.</li>
+                                <li>Built predictive time-series and regression models for cocoa yield, preventing **$150,000+** in annual production losses.</li>
+                                <li>Applied stochastic modeling and Monte Carlo simulations to analyze variability in farmer productivity and optimize resource allocation.</li>
+                            </ul>
+                        </div>
+                        <div class="item-block">
+                            <div class="flex flex-col justify-between md:flex-row md:items-start">
+                                <h3 class="text-xl font-bold text-gray-900">Quantitative Analyst (Expenditure Forecasting and Optimization)</h3>
+                                <p class="text-sm font-medium text-gray-500 shrink-0">2021 – 2022</p>
+                            </div>
+                            <p class="text-base font-semibold italic text-cyan-600">Komfo Anokye Teaching Hospital, Kumasi, Ghana</p>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Integrated **optimization algorithms** and predictive models into hospital budget systems, reducing reporting errors by **20%**.</li>
+                                <li>Supervised 12 analysts performing statistical analyses for expenditure monitoring, ensuring **100% compliance** with Ministry of Finance audits.</li>
+                                <li>Applied time-series analysis and regression techniques to quarterly expenditure trends for predictive control and financial stability.</li>
+                            </ul>
+                        </div>
+                        <div class="item-block">
+                            <div class="flex flex-col justify-between md:flex-row md:items-start">
+                                <h3 class="text-xl font-bold text-gray-900">Teaching Assistant</h3>
+                                <p class="text-sm font-medium text-gray-500 shrink-0">2020 – 2021</p>
+                            </div>
+                            <p class="text-base font-semibold italic text-cyan-600">Department of Mathematics | KNUST, Kumasi, Ghana</p>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Conducted weekly tutorials for 120+ undergraduates in Probability, Statistics, and Differential Equations, boosting average exam performance by **15%**.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Research Experience Section -->
+                <section class="mb-8">
+                    <h2 class="section-title">RESEARCH EXPERIENCE</h2>
+                    <div class="space-y-4">
+                        <div class="item-block">
+                            <h3 class="text-xl font-bold text-gray-900">Research Assistant, University of Cape Coast <span class="text-sm font-medium text-gray-500 block md:inline md:ml-4">Jan. 2023 - May 2024</span></h3>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Applied statistical modelling and machine learning algorithms in R and SPSS to economic datasets.</li>
+                                <li>Improved accuracy of Ghanaian economic forecasts by **18%** compared to baseline regression.</li>
+                                <li>Supported preparation of working paper for peer-reviewed submission in applied statistics.</li>
+                            </ul>
+                        </div>
+                        <div class="item-block">
+                            <h3 class="text-xl font-bold text-gray-900">Research Intern, Ghana Statistical Service <span class="text-sm font-medium text-gray-500 block md:inline md:ml-4">2020</span></h3>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Ran **1,000+ Monte Carlo simulations** to reduce projection error margins by **12%**.</li>
+                                <li>Modeled demographic and socio-economic patterns using probabilistic and statistical techniques.</li>
+                            </ul>
+                        </div>
+                        <div class="item-block">
+                            <h3 class="text-xl font-bold text-gray-900">Undergraduate Research Project, KNUST <span class="text-sm font-medium text-gray-500 block md:inline md:ml-4">2022</span></h3>
+                            <ul class="ml-5 mt-2 list-disc space-y-1 text-sm text-gray-700">
+                                <li>Designed and implemented **differential equation models** to forecast long-term economic stability and growth.</li>
+                                <li>Applied regression, ARIMA, and advanced time series analyses to model 5 key macroeconomic indicators, attaining **95% prediction accuracy**.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Publications Section -->
+                <section class="mb-8">
+                    <h2 class="section-title">PUBLICATIONS & WORKING PAPERS</h2>
+                    <div class="space-y-4">
+                        <div class="item-block border-none p-0">
+                            <ul class="list-disc space-y-3 ml-5 text-sm text-gray-700">
+                                <li>Boafo, R. O., Antobre, B. O., Appiah, G., & Frimpong, F. A. (2025). **Probabilistic Models for Fraud Detection in Mobile Money Transactions in Ghana**. *Submitted to the Egyptian Statistical Journal.*</li>
+                                <li>**Stability and forecasting of Ghana’s Macroeconomy through Applied Mathematical Models** - *in preparation for submission to the African Journal of Applied Mathematics.*</li>
+                                <li>**Geometric Analysis of Urban Growth in Kumasi Using Topological Models** - *working paper aligning with topology and geometry research clusters.*</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </main>
+    </div>
+    
+    <!-- Script to initialize Lucide icons and handle Dark Mode -->
+    <script>
+        // Functionality to toggle Dark Mode
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            const isDark = htmlElement.classList.toggle('dark');
+            
+            // Update local storage
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+            // Update the icon
+            const iconElement = document.getElementById('theme-icon');
+            if (iconElement) {
+                // Change the icon name and re-render
+                iconElement.setAttribute('data-lucide', isDark ? 'moon' : 'sun');
+                lucide.createIcons();
+            }
+        }
+
+        // Check for preferred theme on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlElement = document.documentElement;
+            const iconElement = document.getElementById('theme-icon');
+            
+            // 1. Check local storage for saved theme
+            const savedTheme = localStorage.getItem('theme');
+            
+            // 2. Check system preference if no local storage saved
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            let initialMode = 'light';
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                initialMode = 'dark';
+            }
+
+            if (initialMode === 'dark') {
+                htmlElement.classList.add('dark');
+                if (iconElement) {
+                    iconElement.setAttribute('data-lucide', 'moon');
+                }
+            } else {
+                 htmlElement.classList.remove('dark');
+                if (iconElement) {
+                    iconElement.setAttribute('data-lucide', 'sun');
+                }
+            }
+            
+            // Initialize Lucide icons after setting the correct initial icon
+            lucide.createIcons();
+
+            // Attach click listener to the toggle button
+            const toggleButton = document.getElementById('theme-toggle');
+            if (toggleButton) {
+                toggleButton.addEventListener('click', toggleDarkMode);
+            }
+        });
+    </script>
+    
+</body>
+</html>
